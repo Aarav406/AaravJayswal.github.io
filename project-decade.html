@@ -211,14 +211,15 @@
         <div class="project-content">
             <h3>Project Details</h3>
             <ul>
-                <li>Designed and fabricated a PCB implementing a 7490 decade counter driven by a 555 timer (astable); frequency adjustable via potentiometer to vary counting speed.</li>
-                <li>Routed Clock A to QA to configure the 7490's internal JK flip-flops for mode-10 counting and added a pull-down resistor to prevent QA from floating, restoring accurate decade counting.</li>
+                <li>Designed and fabricated a custom printed circuit board (PCB) to implement a 0-9 decade counter utilizing an SN74LS90 counter IC and a CD4511BE 7-segment display driver.</li>
+                <li>Integrated a NE555P timer operating in astable mode to generate continuous, reliable clock pulses for the counting logic.</li>
+                <li>Incorporated a potentiometer acting as a variable resistor to dynamically adjust the clock frequency, allowing for real-time control over the visual counting speed.</li>
+                <li>Engineered the hardware routing to connect Clock A to QA, accurately configuring the 7490's internal JK flip-flops for mode-10 (decade) counting.</li>
+                <li>Resolved signal floating issues by integrating a pull-down resistor on the QA output, ensuring stable and reliable logic states during operation.</li>
             </ul>
 
             <h3>Circuit Logic & K-MAP</h3>
-            <p>You can detail the logic gates, K-MAP simplifications, and the PCB routing process you went through in KiCAD here.</p>
-
-
+            <p>The design process required extensive K-MAP simplifications and logic gate optimization before finalizing the schematic. Transitioning the circuit from a breadboard prototype to a fully routed PCB reinforced best practices in trace routing, component placement, and hardware debugging. Future iterations could involve cascading multiple 7490 ICs to create multi-digit displays (such as a 0-99 counter) or integrating a digital reset switch for manual state control.</p>
         </div>
     </div>
 
