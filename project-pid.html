@@ -99,12 +99,15 @@
         <div class="project-content">
             <h3>Project Details</h3>
             <ul>
-                <li>Implemented a closed-loop thermal management system on an Arduino, driving a DC fan via PWM based on continuous PID calculations from DHT11 feedback.</li>
-                <li>Integrated a custom 10V-40V to 5V buck converter to power the logic circuitry, utilizing an LM2576 and LC filter to minimize output voltage ripple.</li>
+                <li>Engineered a closed-loop thermal management system using an Arduino to continuously read environmental data from a DHT11 temperature and humidity sensor.</li>
+                <li>Implemented a Proportional-Integral-Derivative (PID) control algorithm in C to calculate precise output adjustments based on real-time thermal feedback.</li>
+                <li>Driven a DC cooling fan via pulse-width modulation (PWM), allowing the microcontroller to dynamically scale fan speed to maintain a strict temperature setpoint.</li>
+                <li>Designed and simulated a custom 10V-40V to 5V step-down buck converter using PSpice to ensure highly stable power delivery to the system.</li>
+                <li>Utilized an LM2576 voltage regulator paired with an optimized LC filter to minimize output voltage ripple, specifically providing clean, isolated 5V power to the sensitive DHT11 sensor and logic circuitry.</li>
             </ul>
 
             <h3>Hardware Integration & PID Tuning</h3>
-            <p>The Proportional, Integral, and Derivative gains were carefully tuned to ensure stable thermal management without over-correction. The custom buck converter was simulated in PSpice to determine the exact inductor and capacitor values needed for the LC filter, significantly reducing ripple voltage before it reached the microcontroller.</p>
+            <p>A significant challenge in this build was fine-tuning the Proportional, Integral, and Derivative gains to prevent the cooling fan from over-correcting or oscillating around the target temperature. By integrating the custom buck converter, the sensitive DHT11 sensor was protected from voltage spikes and power noise, ensuring highly accurate PID calculations. Future scope includes upgrading the system with a telemetry dashboard (such as Foxglove Studio) to monitor temperature curves and PID response times in real-time.</p>
         </div>
     </div>
 
